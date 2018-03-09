@@ -1,0 +1,15 @@
+group 'xxx'
+version '1.0-SNAPSHOT'
+
+apply plugin: 'java'
+
+sourceCompatibility = 1.5
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testCompile group: 'org.testng', name: 'testng', version: '6.14.2'
+    compile group: 'org.seleniumhq.selenium', name: 'selenium-server', version: '3.9.1'
+}
