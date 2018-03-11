@@ -1,5 +1,6 @@
 package Tests;
 
+import com.company.Constants;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -15,7 +16,7 @@ public class loginMailTest extends BaseTest {
     @Test
     public void sendLetter() throws Exception {
         app.sendNewMassege.validMail();
-        Assert.assertEquals(app.afterLogin.getMessage(), "Письмо успешно отправлено адресатам");
-
+        Assert.assertEquals(app.afterLogin.getMessage(), Constants.BASE_MESSAGE);
     }
+
 }

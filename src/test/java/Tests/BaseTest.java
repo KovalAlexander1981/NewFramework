@@ -11,7 +11,7 @@ public class BaseTest {
 
     @AfterSuite
     public void tearDownSuite() throws Exception {
-//app.common.stopApp();
+   app.common.stopApp();
     }
 
 }
