@@ -16,7 +16,9 @@ public class loginMailTest extends BaseTest {
     @Test
     public void sendLetter() throws Exception {
         app.sendNewMassege.validMail();
-        Assert.assertEquals(app.afterLogin.getMessage(), Constants.BASE_MESSAGE);
+        String a = app.afterLogin.getMessage();
+        String newString = new String(a.getBytes("UTF-8"), "UTF-8");
+        Assert.assertEquals(newString, Constants.BASE_MESSAGE);
     }
 
 }
