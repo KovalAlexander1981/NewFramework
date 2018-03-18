@@ -16,8 +16,10 @@ public class LoginPage extends BasePage{
 
 
     public void  login(String  name, String password){
-        inputLogin.sendKeys(name);
-        inputPassword.sendKeys(password);
+		driver.jsSetValue(inputLogin, name);
+      //  inputLogin.sendKeys(name);
+        driver.jsSetValue(inputPassword, password);
+		//inputPassword.sendKeys(password);
         btnLogin.click();
     }
 

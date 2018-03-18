@@ -13,8 +13,9 @@ import java.util.Set;
  */
 public class MyDriver implements WebDriver {
     private static MyDriver myDriver;
-   private static WebDriver driver;
-   private JavascriptExecutor js=(JavascriptExecutor)driver;
+    private static WebDriver driver;
+    private JavascriptExecutor js = (JavascriptExecutor) driver;
+
     static public MyDriver getMyDriver() {
         if (driver == null) {
             driver = DriverFactory.getDriver();
@@ -59,12 +60,12 @@ public class MyDriver implements WebDriver {
 
     @Override
     public void close() {
-
+        driver.close();
     }
 
     @Override
     public void quit() {
-
+        driver.quit();
     }
 
     @Override
@@ -91,7 +92,8 @@ public class MyDriver implements WebDriver {
     public Options manage() {
         return driver.manage();
     }
-    public void jsSetValue (WebElement webElement, String text){
-        js.executeScript("arguments[0].value='"+text+"';", webElement);
+
+    public void jsSetValue(WebElement webElement, String text) {
+        js.executeScript("arguments[0].value='" + text + "';", webElement);
     }
 }
