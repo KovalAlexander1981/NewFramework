@@ -16,10 +16,6 @@ public class loginMailTest extends BaseTest {
     @Test
     public void sendLetter() throws Exception {
         app.sendNewMassege.validMail();
-
-        String a = app.afterLogin.getMessage();
-        System.out.println(a);
         Assert.assertEquals("Письмо успешно отправлено адресатам", Constants.BASE_MESSAGE);
     }
-
 }
