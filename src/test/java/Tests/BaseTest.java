@@ -6,12 +6,12 @@ import org.testng.annotations.AfterSuite;
 
 
 public class BaseTest {
-   protected static User validUser= UserFactory.getValidUser();
-    protected  static App app  = new App();
+    protected static User validUser = UserFactory.getValidUser();
+    protected static App app = new App();
 
     @AfterSuite
     public void tearDownSuite() throws Exception {
-  app.common.stopApp();
+        app.common.stopApp();
     }
 
 }

@@ -27,14 +27,14 @@ test.doFirst {
 
 task chromeTest(type:Test) {
     systemProperty "driver", "chrome"
-    testLogging.showStandartStreams = true
+    testLogging.showStandardStreams = true
     useTestNG() {
         suites "testng.xml"
     }
 }
 task firefoxTest(type:Test) {
     systemProperty "driver", "firefox"
-    testLogging.showStandartStreams = true
+    testLogging.showStandardStreams = true
     useTestNG() {
         suites "testng.xml"
     }

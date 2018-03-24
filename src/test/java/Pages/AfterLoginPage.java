@@ -41,5 +41,7 @@ public class AfterLoginPage extends BasePage{
         return userEmail.getText();
     }
 
-    public String getMessage(){return afterSendMessage.getText();}
+    public String getMessage(){
+		String message =afterSendMessage.getText();
+		return message;}
 }
