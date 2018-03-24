@@ -15,7 +15,7 @@ configurations {
 dependencies {
     agent "org.aspectj:aspectjweaver:1.8.0"
     testCompile "ru.yandex.qatools.allure:allure-testng-adaptor:1.4.0"
-
+    compile group: 'log4j', name: 'log4j', version: '1.2.17'
     testCompile group: 'org.testng', name: 'testng', version: '6.14.2'
     compile group: 'org.seleniumhq.selenium', name: 'selenium-server', version: '3.10.0'
 }
@@ -27,12 +27,14 @@ test.doFirst {
 
 task chromeTest(type:Test) {
     systemProperty "driver", "chrome"
+    testLogging.showStandartStreams = true
     useTestNG() {
         suites "testng.xml"
     }
 }
 task firefoxTest(type:Test) {
     systemProperty "driver", "firefox"
+    testLogging.showStandartStreams = true
     useTestNG() {
         suites "testng.xml"
     }
